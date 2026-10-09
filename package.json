@@ -1,0 +1,16 @@
+{
+  "name": "indiamart-clone",
+  "version": "1.0.0",
+  "description": "IndiaMART Clone",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "start": "live-server --port=3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

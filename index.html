@@ -1,331 +1,529 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IndiaMART - Blue Heaven Cosmetics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles/search.css">
-  <link rel="stylesheet" href="styles/homepage.css">
-  <link rel="stylesheet" href="./components/review.css">
-  <link rel="icon" href="https://corporate.indiamart.com/wp-content/uploads/2019/10/cropped-im-512-512-1.png"
-    type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-  <link rel="stylesheet" href="./styles/slideshow.css">
-  <link rel="stylesheet" href="./styles/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER | Mindfully Crafted Minimalist Apparel</title>
+  <meta name="description" content="Shop premium everyday clothing online. Pure linen shirts, heavyweight cotton tees, selvedge denim, and cashmere knitwear. Free shipping across India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
+  
+  <!-- Font Awesome & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+  <!-- Custom Modern Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
+<body>
 
-<body class="bg-light-purple">
-  <div id="loginModalSection"></div>
-  <div id="otpModalSection"></div>
-  <div id="signupModalSection"></div>
-  <div id="signupOtpModalSection"></div>
-  <div class="container bg-white py-2">
-
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span class="badge">Special Offer</span>
+    <span>Complimentary Express Shipping on Orders Above ₹1,999 • Use Code <strong>FIRST15</strong> for 15% Off</span>
   </div>
-  <div id="homeMainDiv1">
-    <div id="homeMainDiv1-1">
-      <div id="homeSlidesDiv">
-        <div id="slideDiv">
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">
+          <span class="brand-name">ATELIER</span>
+          <span class="brand-sub">Apparel Studio</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#collection" class="active">Collection</a></li>
+          <li><a href="#craft">Fabric & Craft</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/919876543210?text=Hello!%20I%20want%20to%20place%20an%20order%20from%20your%20clothing%20store." target="_blank" class="nav-whatsapp-btn" id="desktopWhatsappBtn" title="Order on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Order Now</span>
+        </a>
+        <a href="#collection" class="icon-btn" title="Search Collection">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <button class="icon-btn" onclick="openCart()" id="cartTrigger" title="Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <i class="fa-solid fa-sparkles"></i>
+            <span>Autumn / Winter 2026 Capsule</span>
+          </div>
+
+          <h1 class="hero-title">
+            Timeless Fits.<br>
+            <em>Pure Textiles.</em><br>
+            Zero Compromise.
+          </h1>
+
+          <p class="hero-description">
+            Thoughtfully designed everyday apparel crafted from 100% natural fibers — French linen, 280 GSM combed cotton, and raw Japanese denim. Built to outlive seasonal trends.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#collection" class="btn-primary">
+              <i class="fa-solid fa-arrow-down"></i> Explore Capsule
+            </a>
+            <a href="#craft" class="btn-secondary">
+              <i class="fa-solid fa-scroll"></i> Our Fabric Philosophy
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-seedling"></i>
+              <div>
+                <strong>100% Natural Fibers</strong>
+                <span>No synthetic polyesters</span>
+              </div>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <div>
+                <strong>Fast Dispatch</strong>
+                <span>Dispatches in 24 hours</span>
+              </div>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <div>
+                <strong>Easy Exchange</strong>
+                <span>7-Day doorstep sizing swap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <img src="assets/hero_banner.jpg" alt="Atelier Capsule Collection flat lay on neutral stone background, no models, clothes only">
+          </div>
+          <div class="hero-floating-badge">
+            <div class="badge-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="badge-text">
+              <h4>Atelier Core Edition</h4>
+              <p>Hand-Finished Seams & Pre-Shrunk Fabric</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="aboutDiv">
-        <div id="aboutHeading">
-          <h2><a href="aboutus.html">About Us</a><span id="aboutUL"></span></h2>
+    </section>
+
+    <!-- Trust Pillars Bar -->
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="trust-info">
+            <h4>Premium Fabric Only</h4>
+            <p>French linen & ring-spun cotton</p>
+          </div>
         </div>
-        <div id="aboutCont"><span>Blue Heaven Cosmetics was started in 1974 by two young brothers, company MD's
-            Mr.Charanjit Singh and Mr. Gurnam Singh with big dreams and ambitions. <br>
-            By virtue of their determination and commitment Blue Heaven Cosmetics has been able to experience such an
-            eventful journey revolutionizing the Indian decorative cosmetics industry.</span>
-          <a href="aboutus.html">+ Read More</a>
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fa-solid fa-box-open"></i></div>
+          <div class="trust-info">
+            <h4>Plastic-Free Packing</h4>
+            <p>Eco-friendly biodegradable boxes</p>
+          </div>
         </div>
-        <div id="aboutIconMain">
-          <div>
-            <div class="iconDiv"><img
-                src="https://images.prismic.io/sortter/fedc7943-6506-4fbd-8ae0-db2b1220dd29_loan_purpose_loans.svg?auto=compress%2Cformat&max-w=1920&max-h=740&fit=crop&crop=faces&h=160&w=160&fit=crop">
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fa-solid fa-tag"></i></div>
+          <div class="trust-info">
+            <h4>Direct From Maker</h4>
+            <p>No distributor middleman markups</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fa-solid fa-comments"></i></div>
+          <div class="trust-info">
+            <h4>Direct WhatsApp Help</h4>
+            <p>Instant personal size guidance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection & Store Catalog Section -->
+    <section class="collection-section" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Shop By Category</span>
+          <h2 class="section-title">The Complete Capsule</h2>
+          <p class="section-subtitle">
+            Every garment photographed studio-flat to focus entirely on weave, drape, and tailoring.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="filter-bar">
+          <div class="category-pills">
+            <button class="cat-btn active" onclick="filterCategory('all', this)">All Pieces</button>
+            <button class="cat-btn" onclick="filterCategory('shirts', this)">Shirts</button>
+            <button class="cat-btn" onclick="filterCategory('outerwear', this)">Outerwear</button>
+            <button class="cat-btn" onclick="filterCategory('t-shirts', this)">T-Shirts</button>
+            <button class="cat-btn" onclick="filterCategory('knitwear', this)">Knitwear</button>
+            <button class="cat-btn" onclick="filterCategory('trousers', this)">Trousers</button>
+          </div>
+
+          <div class="filter-controls">
+            <div class="search-input-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="productSearch" class="search-input" placeholder="Search by cloth, weave..." aria-label="Search Apparel">
             </div>
-            <div>
-              <p>Nature of Business</p>
-              <span>Exporter and Manufacturer</span>
+
+            <select id="sortSelect" class="sort-select" aria-label="Sort Collection">
+              <option value="featured">Featured First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Customer Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid (Dynamically Populated) -->
+        <div class="products-grid" id="productsContainer">
+          <!-- Populated by scripts/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Craftsmanship & Fabric Story -->
+    <section class="story-section" id="craft">
+      <div class="container story-grid">
+        <div class="story-visual">
+          <img src="assets/linen_shirt.jpg" alt="Pure natural linen button down detail, fabric texture, clothes only">
+          <div class="story-stats">
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-num-lbl stat-lbl">Natural Fibers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">0%</span>
+              <span class="stat-num-lbl stat-lbl">Polyester</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">10 Yrs</span>
+              <span class="stat-num-lbl stat-lbl">Durability Goal</span>
             </div>
           </div>
-          <div>
-            <div class="iconDiv"><img src="https://www.tacocomfort.com/wp-content/uploads/2020/06/building-icon.png">
+        </div>
+
+        <div class="story-content">
+          <span class="section-pill">Our Philosophy</span>
+          <h2 class="story-title">We Let The Fabric Speak For Itself.</h2>
+          <p class="story-description">
+            Fast-fashion relies on heavy marketing, plastic blends, and throwaway cycles. We decided to strip everything away and invest 100% of the budget into the material that directly touches your skin.
+          </p>
+
+          <div class="story-bullets">
+            <div class="story-bullet">
+              <i class="fa-solid fa-check-circle"></i>
+              <div>
+                <strong>Breathable French Flax Linen</strong>
+                <p>Natural thermal regulation that cools you in summer and layers warmly in winter.</p>
+              </div>
             </div>
-            <div>
-              <p>Year of Establishment</p>
-              <span>1974</span>
+            <div class="story-bullet">
+              <i class="fa-solid fa-check-circle"></i>
+              <div>
+                <strong>Double-Fold Flat-Felled Seams</strong>
+                <p>No itchy internal raw edges. Reinforced at all stress points for years of wear.</p>
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="iconDiv"><img
-                src="https://images.squarespace-cdn.com/content/v1/5bf640815417fc9e066fa851/1600446374575-NBXLFG5XUIZZTI3TL8I3/Identifying+Smart+Trade-offs+Icon.png?format=300w">
-            </div>
-            <div>
-              <p>Legal Status of Firm</p>
-              <span>Limited Company (Ltd./Pvt.Ltd.)</span>
-            </div>
-          </div>
-          <div>
-            <div class="iconDiv"><img src="https://www.masibus.com/wp-content/uploads/2019/07/1992.jpg"></div>
-            <div>
-              <p>Annual Turnover</p>
-              <span>Rs. 50 - 100 Crore</span>
-            </div>
-          </div>
-          <div>
-            <div class="iconDiv"><img
-                src="https://thumbs.dreamstime.com/b/globe-business-connect-connection-global-internet-world-blue-dotted-line-icon-149011461.jpg">
-            </div>
-            <div>
-              <p>Import Export Code (IEC)</p>
-              <span>05040*****</span>
-            </div>
-          </div>
-          <div>
-            <div class="iconDiv"><img
-                src="https://www.rbcwealthmanagement.com/_assets/images/legacy/icons/documents-seal.svg"></div>
-            <div>
-              <p>GST Number</p>
-              <span>07AACCB1155C1ZB</span>
+            <div class="story-bullet">
+              <i class="fa-solid fa-check-circle"></i>
+              <div>
+                <strong>Sanforized & Pre-Washed</strong>
+                <p>Every piece is garment-washed before packing, so your fit stays identical after laundry.</p>
+              </div>
             </div>
           </div>
 
+          <div>
+            <a href="#collection" class="btn-primary" style="margin-top: 0.8rem;">
+              Shop The Quality
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews / Social Proof -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Verified Feedback</span>
+          <h2 class="section-title">Loved by Discerning Wearers</h2>
+          <p class="section-subtitle">Real experiences from people who appreciate honest craftsmanship.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "The linen shirt drape is unbelievable. You can immediately feel that this is genuine pure flax linen, not a cheap rayon blend. The buttons and collar stiffness are spot on."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">AK</div>
+              <div class="author-info">
+                <h5>Aman Kapoor</h5>
+                <span><i class="fa-solid fa-circle-check"></i> Verified Buyer • Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "Ordered the Heavyweight 280 GSM Tee. Finally a white t-shirt that is completely opaque, doesn't stretch out at the collar after 4 washes, and fits boxy without looking sloppy."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">RS</div>
+              <div class="author-info">
+                <h5>Rohan Sharma</h5>
+                <span><i class="fa-solid fa-circle-check"></i> Verified Buyer • Bengaluru</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "The Selvedge Denim Jacket feels like something out of a Tokyo boutique. The raw denim is stiff at first but after a week it molds right to your posture. Exceptional value for the price."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">VS</div>
+              <div class="author-info">
+                <h5>Vikramaditya S.</h5>
+                <span><i class="fa-solid fa-circle-check"></i> Verified Buyer • New Delhi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about sizing, dispatch, and returns.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>How do your garments fit? Should I size up or down?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our shirts and t-shirts feature a contemporary relaxed silhouette. If you prefer a relaxed, effortless drape, stay true to your normal size. If you prefer a slim tailored fit, you can comfortably size down. Every product has exact measurements in the Quick View modal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long does delivery take?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>All orders are dispatched from our studio within 24 to 48 hours. Metro cities typically receive delivery in 2-3 business days; rest of India takes 3-5 business days via Bluedart / Delhivery express.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your exchange and return policy?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We provide a 7-day hassle-free doorstep size exchange. If the size doesn't fit, simply send us a message or email, and our courier will pick up the piece from your doorstep and swap the size.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I order directly on WhatsApp?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! In the shopping bag drawer, click the "Order via WhatsApp" button. It will automatically compile your selected products, sizes, and quantities into a formatted message for instant order confirmation with our team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter / VIP Discount -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="section-pill">Private Club</span>
+          <h3>Join The Atelier Insider</h3>
+          <p>Receive early access to seasonal capsule drops and get 15% off your first purchase.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn-primary">Claim 15%</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Modern Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-mark">A</div>
+            <div class="logo-text">
+              <span class="brand-name">ATELIER</span>
+              <span class="brand-sub">Apparel Studio</span>
+            </div>
+          </div>
+          <p>
+            An independent personal apparel label dedicated to high-grade natural textiles, ethical manufacturing, and durable wardrobe essentials.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="social-btn" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Capsule</h4>
+          <ul class="footer-links">
+            <li><a href="#collection" onclick="filterCategory('shirts')">Linen Shirts</a></li>
+            <li><a href="#collection" onclick="filterCategory('outerwear')">Denim & Jackets</a></li>
+            <li><a href="#collection" onclick="filterCategory('t-shirts')">Heavyweight Tees</a></li>
+            <li><a href="#collection" onclick="filterCategory('knitwear')">Cashmere Knits</a></li>
+            <li><a href="#collection" onclick="filterCategory('trousers')">Chino Trousers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">Size Guide & Fit</a></li>
+            <li><a href="#faq">Shipping & Tracking</a></li>
+            <li><a href="#faq">Doorstep Exchanges</a></li>
+            <li><a href="#craft">Fabric Care Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Store Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:concierge@atelierclothing.com"><i class="fa-regular fa-envelope"></i> concierge@atelier.com</a></li>
+            <li><a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a></li>
+            <li><span style="font-size: 0.85rem;"><i class="fa-solid fa-location-dot"></i> Studio 4, Design District, India</span></li>
+            <li><span style="font-size: 0.85rem; color: var(--accent-emerald);"><i class="fa-solid fa-circle"></i> Direct Orders Open</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 ATELIER Apparel Studio. All rights reserved. Crafted for pure fabric lovers.</span>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa" title="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fa-solid fa-wallet" title="UPI & NetBanking"></i>
+          <i class="fa-brands fa-google-pay" title="GPay"></i>
         </div>
       </div>
     </div>
+  </footer>
 
-    <div id="homeMainDiv1-2">
-      <div id="prodHeading">
-        <h2><a href="#">Products & Services</a><span id="prodUL"></span></h2>
+  <!-- Off-Canvas Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Shopping Bag</h3>
+      <button class="cart-close-btn" onclick="closeCart()" aria-label="Close Bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartItems">
+      <!-- Populated dynamically by scripts/app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div style="display: flex; gap: 0.5rem;">
+        <input type="text" id="couponCode" placeholder="Promo Code (FIRST15)" style="flex-grow: 1; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.6rem 0.8rem; color: var(--text-main); font-size: 0.85rem; outline: none; text-transform: uppercase;">
+        <button onclick="applyCoupon()" class="btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.85rem;">Apply</button>
       </div>
-      <div id="prodDiv">
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img src="https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg"></figure>
-            <h3><a href="#">Makeup</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href=""><span>Foundation</span></a></li>
-              <li><a href=""><span>Compact</span></a></li>
-              <li><a href=""><span>Pan Cake Foundation</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
 
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx2" src="https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg"></figure>
-            <h3><a href="#">Lipstick</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Baked Brick Lipstick</span></a></li>
-              <li><a href="#"><span>Cerise Pink Lipstick</span></a></li>
-              <li><a href="#"><span>Coral Red Lipstick</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
+      <div class="cart-subtotal">
+        <span>Estimated Total:</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
 
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx3" src="https://3.imimg.com/data3/RK/XF/MY-3792183/01-250x250.jpg"></figure>
-            <h3><a href="#">Lips Products</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Lip Gloss</span></a></li>
-              <li><a href="#"><span>Lip Stick</span></a></li>
-              <li><a href="#"><span>Lip Liner</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
+      <button class="checkout-btn" onclick="proceedCheckout()">
+        <i class="fa-solid fa-lock"></i> Proceed to Checkout
+      </button>
 
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx4" src="https://3.imimg.com/data3/NL/QG/MY-3792183/fruit-bleach-250x250.jpg"></figure>
-            <h3><a href="#">Bleach Cream</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Fruit Bleach</span></a></li>
-              <li><a href="#"><span>Gold Bleach</span></a></li>
-              <li><a href="#"><span>Personal Bleach</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
+      <button class="whatsapp-order-btn" onclick="orderViaWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i> Order Directly On WhatsApp
+      </button>
+    </div>
+  </aside>
 
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx5" src="https://3.imimg.com/data3/QC/FL/MY-3792183/fairness-scrub-250x250.jpg">
-            </figure>
-            <h3><a href="#">Scrubs</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Fairness Scrub</span></a></li>
-              <li><a href="#"><span>Mix Fruit Scrub</span></a></li>
-              <li><a href="#"><span>Facial Scrub - Walnut & Apricot</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
-
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx6" src="https://3.imimg.com/data3/ML/RO/MY-3792183/mascara-250x250.jpg"></figure>
-            <h3><a href="#">Eye Products</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Mascara</span></a></li>
-              <li><a href="#"><span>Eye Shadow</span></a></li>
-              <li><a href="#"><span>Eye Liner</span></a></li>
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
-
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx7" src="https://3.imimg.com/data3/US/UJ/MY-3792183/lip-balm-250x250.jpg"></figure>
-            <h3><a href="#">LipCare</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Lip Balm</span></a></li>
-              <li><a href="#"><span>Lip Guard</span></a></li>
-              <!-- <li><a href=""><span>Pan Cake Foundation</span></a></li> -->
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
-
-        <article class="prodCard">
-          <div class="prodImgDiv">
-            <figure><img id="imgEx8" src="https://3.imimg.com/data3/WJ/EO/MY-3792183/01-250x250.jpg"></figure>
-            <h3><a href="#">Traditional Items</a></h3>
-          </div>
-          <div class="prodListDiv">
-            <ul>
-              <li><a href="#"><span>Sindoor</span></a></li>
-              <li><a href="#"><span>Kajal</span></a></li>
-              <!-- <li><a href="#"><span>Pan Cake Foundation</span></a></li> -->
-            </ul>
-          </div>
-          <a class="prodMore" href="#"><span>View Details</span></a>
-        </article>
-
-        <span id="viewRangeBtn"><a href="#">View Complete Range</a></span>
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="quickview-modal">
+      <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close Preview">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="quickview-grid" id="quickViewBody">
+        <!-- Injected by scripts/app.js -->
       </div>
     </div>
   </div>
 
+  <!-- Mobile Floating WhatsApp Button (Visible only on Mobile) -->
+  <a href="https://wa.me/919876543210?text=Hello!%20I%20want%20to%20place%20an%20order%20from%20your%20clothing%20store." target="_blank" class="mobile-floating-whatsapp" id="mobileWhatsappBtn" aria-label="Order on WhatsApp" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-ping"></span>
+  </a>
 
-  <!-- --------Reviews & Ratings Section starts here-------- -->
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
 
-  <div id="homeMainDivReviews"></div>
-  <div id="footerSection"></div>
+  <!-- Main Application Script -->
+  <script src="scripts/app.js"></script>
 </body>
-
 </html>
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer">
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-   crossorigin="anonymous">
-</script>
-<!-- Navbar Script -->
-<script type="module" src="./scripts/navbar.js"></script>
-<script src="./scripts/logout.js"></script>
-<!-- Navbar Script Ends -->
-<script src="scripts/searchbar.js"></script>
-<script src="scripts/db.js"></script>
-<script type="module" src="scripts/homepage.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-<script type="module">
-    // console.log('hello');
-    import SlideShow from './components/Slideshow.js';
-    // console.log(SlideShow());
-    let slideDiv = document.getElementById('slideDiv');
-    slideDiv.innerHTML = SlideShow();
-    let data=[
-         {name:"Foundation",url:"https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg"},
-         {name:"Pan Stick Foundation",url:"https://3.imimg.com/data3/LX/OI/MY-3792183/pan-stick-250x250.jpg"},
-         {name:"Compact",url:"https://3.imimg.com/data3/YL/EJ/MY-3792183/01-250x250.jpg"},
-         {name:"Fairness Scrub",url:"https://3.imimg.com/data3/QC/FL/MY-3792183/fairness-scrub-250x250.jpg"},
-         {name:"Nail enamel",url:"https://3.imimg.com/data3/BK/MD/MY-3792183/01-250x250.jpg"},
-         {name:"Lip Gloss",url:"https://3.imimg.com/data3/RK/XF/MY-3792183/01-250x250.jpg"},
-         {name:"Fruit Bleach",url:"https://3.imimg.com/data3/NL/QG/MY-3792183/fruit-bleach-250x250.jpg"},
-         {name:"Lip Balm",url:"https://3.imimg.com/data3/US/UJ/MY-3792183/lip-balm-250x250.jpg"},
-         
-     ]
- 
-         //this function is for appending data in slideshow container
-    let append=()=>{
-    
-    let c=0;
-    for(let i=0;i<data.length;i++)
-    {
-        //this is the div used for slide
-        let div=document.getElementById("c"+(c+1));
-        div.innerHTML=null;
- 
-        let img=document.createElement("img");
-        img.src=data[i].url;
- 
-        let div2=document.createElement("div");
-        div2.setAttribute("class","name");
- 
-        let name=document.createElement("div");
-        name.innerText=data[i].name;
- 
-        let div3=document.createElement("div");
- 
- 
-        let btn=document.createElement("button");
-        btn.setAttribute("class","slideBtn");
-        btn.innerText="Get Best Quote";
- 
-        div3.append(btn)
- 
-        div2.append(name,div3);
- 
-        div.append(img,div2);
-        c++;
- 
-    }
-
-    
- 
-   }
- 
-   append();
-   $('.Slideshow_Container').slick({
-   slidesToShow: 4,
-   slidesToScroll: 1,
-   autoplay: true,
-   //   infinite: true,
-   autoplaySpeed: 2000,
-   });
-
-
-    document.querySelector(".slick-prev").innerText="<";
-    document.querySelector(".slick-next").innerText=">";
-
-</script>
-<script type="module" src="./scripts/footer.js"></script>
