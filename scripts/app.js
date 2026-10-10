@@ -136,7 +136,7 @@ const PRODUCTS = [
   },
   {
     id: 8,
-    name: "Atelier Capsule Studio Set",
+    name: "VIP Exchange Capsule Set",
     category: "Outerwear",
     fabric: "Curated Seasonal Wardrobe",
     price: 7999,
@@ -524,7 +524,7 @@ window.orderViaWhatsApp = function() {
     return;
   }
 
-  let text = "Hello! I want to order the following clothes from your store:%0A%0A";
+  let text = "Hello! I want to order the following clothes from VIP Exchange:%0A%0A";
   let total = 0;
   cart.forEach((item, idx) => {
     text += `${idx + 1}. *${item.name}* (Size: ${item.size}) x ${item.qty} - ₹${(item.price * item.qty).toLocaleString('en-IN')}%0A`;
@@ -538,7 +538,7 @@ window.orderViaWhatsApp = function() {
 
   text += `%0A*Total Amount: ₹${total.toLocaleString('en-IN')}*%0APlease confirm my order.`;
   
-  const whatsappUrl = `https://wa.me/919876543210?text=${text}`;
+  const whatsappUrl = `https://wa.me/917065989961?text=${text}`;
   window.open(whatsappUrl, '_blank');
 };
 

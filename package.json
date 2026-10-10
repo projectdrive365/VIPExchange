@@ -1,7 +1,7 @@
 {
-  "name": "indiamart-clone",
+  "name": "vip-exchange",
   "version": "1.0.0",
-  "description": "IndiaMART Clone",
+  "description": "VIP Exchange",
   "main": "index.html",
   "scripts": {
     "dev": "live-server --port=3000",
